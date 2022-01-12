@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="panel active"
+        style="
+          background-image: url('/images/claudio-schwarz-hJqFSJhQrsw-unsplash.jpg');
+        "
+      >
+        <h3>
+          enter to play
+          <div class="login">
+            <input type="text" id="userName" placeholder="enter yuor name" />
+            <input
+              type="password"
+              name=""
+              id="password"
+              placeholder="enter yuor password"
+            />
+            <button type="submit" onclick="start()">start</button>
+          </div>
+        </h3>
+      </div>
+      <div
+        class="panel"
+        style="
+          background-image: url('/images/othmane-ferrah-C5yaI8XWYvw-unsplash.jpg');
+        "
+      >
+        <h3>
+          Choose the level of difficulty you are interested
+          <div class="LevelSelection">
+            <button onclick="newGame(1)">start level</button>
+            <button onclick="newGame(5)">mid level</button>
+            <button onclick="newGame(7)">high level</button>
+          </div>
+        </h3>
+      </div>
+      <div
+        class="panel"
+        style="
+          background-image: url('/images/ouael-ben-salah-Hqb-daSdX10-unsplash.jpg');
+        "
+      >
+        <h3>
+          soduko game
+          <span>
+            <table class="sudoku">
+              <tbody>
+                <tr class="1">
+                  <td class="a">
+                    <input type="text" id="a11" maxlength="1" />
+                  </td>
+                  <td class="2">
+                    <input type="text" id="a12" maxlength="1" />
+                  </td>
+                  <td class="3 thick_right">
+                    <input id="a13" type="text" maxlength="1" />
+                  </td>
+                  <td class="4">
+                    <input type="text" id="a14" maxlength="1" />
+                  </td>
+                  <td class="5">
+                    <input type="text" id="a15" maxlength="1" />
+                  </td>
+                  <td class="6 thick_right">
+                    <input id="a16" type="text" maxlength="1" />
+                  </td>
+                  <td class="7">
+                    <input type="text" id="a17" maxlength="1" />
+                  </td>
+                  <td class="8">
+                    <input type="text" id="a18" maxlength="1" />
+                  </td>
+                  <td class="9">
+                    <input type="text" id="a19" maxlength="1" />
+                  </td>
+                </tr>
+                <tr class="2">
+                  <td class="1">
+                    <input type="text" id="a20" maxlength="1" />
+                  </td>
+                  <td class="2">
+                    <input type="text" id="a21" maxlength="1" />
+                  </td>
+                  <td class="3 thick_right">
+                    <input id="a22" type="text" maxlength="1" />
+                  </td>
+                  <td class="4">
+                    <input type="text" id="a23" maxlength="1" />
+                  </td>
+                  <td class="5">
+                    <input type="text" id="a24" maxlength="1" />
+                  </td>
+                  <td class="6 thick_right">
+                    <input id="a25" type="text" maxlength="1" />
+                  </td>
+                  <td class="7">
+                    <input type="text" id="a26" maxlength="1" />
+                  </td>
+                  <td class="8">
+                    <input type="text" id="a27" maxlength="1" />
+                  </td>
+                  <td class="9">
+                    <input type="text" id="a28" maxlength="1" />
+                  </td>
+                </tr>
+                <tr class="3 thick_bottom">
+                  <td class="1">
+                    <input type="text" id="a29" maxlength="1" />
+                  </td>
+                  <td class="2">
+                    <input type="text" id="a30" maxlength="1" />
+                  </td>
+                  <td class="3 thick_right">
+                    <input id="a31" type="text" maxlength="1" />
+                  </td>
+                  <td class="4">
+                    <input type="text" id="a32" maxlength="1" />
+                  </td>
+                  <td class="5">
+                    <input type="text" id="a33" maxlength="1" />
+                  </td>
+                  <td class="6 thick_right">
+                    <input id="a34" type="text" maxlength="1" />
+                  </td>
+                  <td class="7">
+                    <input type="text" id="a35" maxlength="1" />
+                  </td>
+                  <td class="8">
+                    <input type="text" id="a36" maxlength="1" />
+                  </td>
+                  <td class="9">
+                    <input type="text" id="a37" maxlength="1" />
+                  </td>
+                </tr>
+                <tr class="4">
+                  <td class="1">
+                    <input type="text" id="a38" maxlength="1" />
+                  </td>
+                  <td class="2">
+                    <input type="text" id="a39" maxlength="1" />
+                  </td>
+                  <td class="3 thick_right">
+                    <input id="a40" type="text" maxlength="1" />
+                  </td>
+                  <td class="4">
+                    <input type="text" id="a41" maxlength="1" />
+                  </td>
+                  <td class="5">
+                    <input type="text" id="a42" maxlength="1" />
+                  </td>
+                  <td class="6 thick_right">
+                    <input id="a43" type="text" maxlength="1" />
+                  </td>
+                  <td class="7">
+                    <input type="text" id="a44" maxlength="1" />
+                  </td>
+                  <td class="8">
+                    <input type="text" id="a45" maxlength="1" />
+                  </td>
+                  <td class="9">
+                    <input type="text" id="a46" maxlength="1" />
+                  </td>
+                </tr>
+                <tr class="5">
+                  <td class="1">
+                    <input type="text" id="a47" maxlength="1" />
+                  </td>
+                  <td class="2">
+                    <input type="text" id="a48" maxlength="1" />
+                  </td>
+                  <td class="3 thick_right">
+                    <input id="a49" type="text" maxlength="1" />
+                  </td>
+                  <td class="4">
+                    <input type="text" id="a50" maxlength="1" />
+                  </td>
+                  <td class="5">
+                    <input type="text" id="a51" maxlength="1" />
+                  </td>
+                  <td class="6 thick_right">
+                    <input id="a52" type="text" maxlength="1" />
+                  </td>
+                  <td class="7">
+                    <input type="text" id="a53" maxlength="1" />
+                  </td>
+                  <td class="8">
+                    <input type="text" id="a54" maxlength="1" />
+                  </td>
+                  <td class="9">
+                    <input type="text" id="a55" maxlength="1" />
+                  </td>
+                </tr>
+                <tr class="6 thick_bottom">
+                  <td class="1">
+                    <input type="text" id="a56" maxlength="1" />
+                  </td>
+                  <td class="2">
+                    <input type="text" id="a57" maxlength="1" />
+                  </td>
+                  <td class="3 thick_right">
+                    <input id="a58" type="text" maxlength="1" />
+                  </td>
+                  <td class="4">
+                    <input type="text" id="a59" maxlength="1" />
+                  </td>
+                  <td class="5">
+                    <input type="text" id="a60" maxlength="1" />
+                  </td>
+                  <td class="6 thick_right">
+                    <input id="a61" type="text" maxlength="1" />
+                  </td>
+                  <td class="7">
+                    <input type="text" id="a62" maxlength="1" />
+                  </td>
+                  <td class="8">
+                    <input type="text" id="a63" maxlength="1" />
+                  </td>
+                  <td class="9">
+                    <input type="text" id="a64" maxlength="1" />
+                  </td>
+                </tr>
+                <tr class="7">
+                  <td class="1">
+                    <input type="text" id="a65" maxlength="1" />
+                  </td>
+                  <td class="2">
+                    <input type="text" id="a66" maxlength="1" />
+                  </td>
+                  <td class="3 thick_right">
+                    <input id="a67" type="text" maxlength="1" />
+                  </td>
+                  <td class="4">
+                    <input type="text" id="a68" maxlength="1" />
+                  </td>
+                  <td class="5">
+                    <input type="text" id="a69" maxlength="1" />
+                  </td>
+                  <td class="6 thick_right">
+                    <input id="a70" type="text" maxlength="1" />
+                  </td>
+                  <td class="7">
+                    <input type="text" id="a71" maxlength="1" />
+                  </td>
+                  <td class="8">
+                    <input type="text" id="a72" maxlength="1" />
+                  </td>
+                  <td class="9">
+                    <input type="text" id="a73" maxlength="1" />
+                  </td>
+                </tr>
+                <tr class="8">
+                  <td class="1">
+                    <input type="text" id="a74" maxlength="1" />
+                  </td>
+                  <td class="2">
+                    <input type="text" id="a75" maxlength="1" />
+                  </td>
+                  <td class="3 thick_right">
+                    <input id="a76" type="text" maxlength="1" />
+                  </td>
+                  <td class="4">
+                    <input type="text" id="a77" maxlength="1" />
+                  </td>
+                  <td class="5">
+                    <input type="text" id="a78" maxlength="1" />
+                  </td>
+                  <td class="6 thick_right">
+                    <input id="a79" type="text" maxlength="1" />
+                  </td>
+                  <td class="7">
+                    <input type="text" id="a80" maxlength="1" />
+                  </td>
+                  <td class="8">
+                    <input type="text" id="a81" maxlength="1" />
+                  </td>
+                  <td class="9">
+                    <input type="text" id="a82" maxlength="1" />
+                  </td>
+                </tr>
+                <tr class="9">
+                  <td class="1">
+                    <input type="text" id="a83" maxlength="1" />
+                  </td>
+                  <td class="2">
+                    <input type="text" id="a84" maxlength="1" />
+                  </td>
+                  <td class="3 thick_right">
+                    <input id="a85" type="text" maxlength="1" />
+                  </td>
+                  <td class="4">
+                    <input type="text" id="a86" maxlength="1" />
+                  </td>
+                  <td class="5">
+                    <input type="text" id="a87" maxlength="1" />
+                  </td>
+                  <td class="6 thick_right">
+                    <input id="a88" type="text" maxlength="1" />
+                  </td>
+                  <td class="7">
+                    <input type="text" id="a89" maxlength="1" />
+                  </td>
+                  <td class="8">
+                    <input type="text" id="a90" maxlength="1" />
+                  </td>
+                  <td class="9">
+                    <input type="text" id="a91" maxlength="1" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button onclick="newGame(1)">again</button>
+            <button onclick="checkGame()">finish</button>
+          </span>
+        </h3>
+      </div>
+      <!-- <div
+        class="panel"
+        style="
+          background-image: url('/images/wolfgang-hasselmann-4m5x1WczYpw-unsplash.jpg');
+        "
+      >
+        <h3>explorer in the snow</h3>
+      </div>
+      <div
+        class="panel"
+        style="
+          background-image: url('/images/wolfgang-hasselmann-95-aJTHBFxE-unsplash (1).jpg');
+        "
+      >
+        <h3>explorer At sunset</h3>
+      </div>
+    </div> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
