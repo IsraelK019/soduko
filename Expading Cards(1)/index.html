@@ -18,7 +18,7 @@
         "
       >
         <h3>
-          enter to play
+          <div class="title">Welcome to soduko game</div> 
           <div class="login">
             <div class="input-group mb-3">
               <span class="input-group-text" id="basic-addon1">@</span>
@@ -30,7 +30,7 @@
               <input type="password" class="form-control" id="password" placeholder="password" aria-label="Username" aria-describedby="basic-addon1">
             </div>  
            
-            <button type="submit" class="btn btn-primary" onclick="start()">start</button>
+            <button type="submit" class="btn btn-primary" onclick="nextPage()">start</button>
           </div>
         </h3>
       </div>
@@ -324,8 +324,9 @@
               </tbody>
             </table>
             <div class="btnGame">
-            <button class="btn btn-secondary" onclick="newGame(1)">again</button>
-            <button class="btn btn-success" onclick="checkGame()">finish</button>
+            <button class="btn btn-secondary" onclick="newGame(1)">Again</button>
+            <button class="btn btn-success" onclick="checkGame()">Finish</button>
+            <button class="btn btn-info" onclick="changeLevel()">Change Level</button>
           </div>
           </span>
         </h3>

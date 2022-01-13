@@ -6,23 +6,39 @@ panels.forEach((panel) => {
     panel.classList.add('active')
   })
 })
-panels.forEach((panel) => {
-  panel.addEventListener('click', () => {
-    remoeActiveClasses()
-    panel.classList.add('active')
+
+function nextPage() {
+  panels.forEach((panel, index) => {
+    panel.addEventListener('click', () => {
+      if (index + 1 < panels.length) {
+        remoeActiveClasses()
+        panels[index + 1].classList.add('active')
+        console.log(index + 2, panels.length)
+      }
+    })
   })
-})
+}
 
 function remoeActiveClasses() {
   panels.forEach((panel) => {
     panel.classList.remove('active')
   })
 }
+function changeLevel() {
+  panels.forEach((panel, index) => {
+    panel.addEventListener('click', () => {
+      panel.classList.remove('active')
+      panels[index - 1].classList.add('active')
+    })
+  })
+}
 
 function start() {
   let name = document.querySelector('#userName')
   let pass = document.querySelector('#password')
-  if (name.value === 'abcd' && pass.value === '1234') return alert('gooood')
+  if (name.value === 'abcd' && pass.value === '1234') {
+    nextPage()
+  }
 }
 
 function newGame(level) {
@@ -59,6 +75,7 @@ function newGame(level) {
       }
     }
   }
+  nextPage()
 }
 function checkGame() {
   let x
