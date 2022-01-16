@@ -1,11 +1,11 @@
 const panels = document.querySelectorAll('.panel')
 
-panels.forEach((panel) => {
-  panel.addEventListener('click', () => {
-    remoeActiveClasses()
-    panel.classList.add('active')
-  })
-})
+// panels.forEach((panel) => {
+//   panel.addEventListener('click', () => {
+//     remoeActiveClasses()
+//     panel.classList.add('active')
+//   })
+// })
 
 function nextPage() {
   panels.forEach((panel, index) => {
@@ -27,12 +27,19 @@ function remoeActiveClasses() {
 function changeLevel() {
   panels.forEach((panel, index) => {
     panel.addEventListener('click', () => {
-      panel.classList.remove('active')
+      remoeActiveClasses()
       panels[index - 1].classList.add('active')
     })
   })
 }
-
+function exit() {
+  panels.forEach((panel, index) => {
+    panel.addEventListener('click', () => {
+      remoeActiveClasses()
+      panels[index - 2].classList.add('active')
+    })
+  })
+}
 function start() {
   let name = document.querySelector('#userName')
   let pass = document.querySelector('#password')
