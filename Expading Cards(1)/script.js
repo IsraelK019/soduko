@@ -22,7 +22,15 @@ function remoeActiveClasses() {
 function start() {
   let name = document.querySelector('#userName')
   let pass = document.querySelector('#password')
-  if (name.value === 'abcd' && pass.value === '1234') return alert('gooood')
+  if (name.value === 'abcd' && pass.value === '1234'){
+  
+    return alert('gooood')
+  } 
+  else {
+    return alert ('Please check your login info and try again')
+  }
+    
+
 }
 
 function newGame(level) {
