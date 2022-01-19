@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 html {
-  font-family: 'Jost', sans-serif;
+  font-family: "Muli", sans-serif;
 }
 * {
   box-sizing: border-box;
-  /* border: 1px black solid; */
 }
 
 body {
-  /* font-family: 'Muli', sans-serif; */
+  font-family: "Muli", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +82,7 @@ body {
 .panel h3 .sudoku td {
   padding: 0;
   border: 1px solid black;
-  width: 1em;
+  width: 20px;
 }
 .panel h3 .sudoku input {
   width: 1em;
@@ -96,4 +95,19 @@ body {
 }
 .panel h3 .sudoku .thick_bottom {
   border-bottom: 4px solid black;
+}
+h3 {
+  border: 1px black solid;
+}
+.msg {
+  font-size: 15px;
+  color: brown;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+input {
+  margin: 0px;
+}
+.input-group {
+  margin-bottom: 5px;
 }
