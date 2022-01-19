@@ -1,36 +1,51 @@
 const panels = document.querySelectorAll('.panel')
 
-panels.forEach((panel) => {
-  panel.addEventListener('click', () => {
-    remoeActiveClasses()
-    panel.classList.add('active')
+// panels.forEach((panel) => {
+//   panel.addEventListener('click', () => {
+//     remoeActiveClasses()
+//     panel.classList.add('active')
+//   })
+// })
+
+function nextPage() {
+  panels.forEach((panel, index) => {
+    panel.addEventListener('click', () => {
+      if (index + 1 < panels.length) {
+        remoeActiveClasses()
+        panels[index + 1].classList.add('active')
+        console.log(index + 2, panels.length)
+      }
+    })
   })
-})
-panels.forEach((panel) => {
-  panel.addEventListener('click', () => {
-    remoeActiveClasses()
-    panel.classList.add('active')
-  })
-})
+}
 
 function remoeActiveClasses() {
   panels.forEach((panel) => {
     panel.classList.remove('active')
   })
 }
-
+function changeLevel() {
+  panels.forEach((panel, index) => {
+    panel.addEventListener('click', () => {
+      remoeActiveClasses()
+      panels[index - 1].classList.add('active')
+    })
+  })
+}
+function exit() {
+  panels.forEach((panel, index) => {
+    panel.addEventListener('click', () => {
+      remoeActiveClasses()
+      panels[index - 2].classList.add('active')
+    })
+  })
+}
 function start() {
   let name = document.querySelector('#userName')
   let pass = document.querySelector('#password')
-  if (name.value === 'abcd' && pass.value === '1234'){
-  
-    return alert('gooood')
-  } 
-  else {
-    return alert ('Please check your login info and try again')
+  if (name.value === 'abcd' && pass.value === '1234') {
+    nextPage()
   }
-    
-
 }
 
 function newGame(level) {
@@ -67,6 +82,7 @@ function newGame(level) {
       }
     }
   }
+  nextPage()
 }
 function checkGame() {
   let x
